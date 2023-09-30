@@ -19,9 +19,15 @@ const soure = {3:'c',4:'d'}
 
 //using spread operator
 const obj3 = {...target,...soure}
-console.log(obj3)
+// console.log(obj3)
 
-console.log(tinderDog.hasOwnProperty('user'))
-console.log(Object.keys(tinderDog));
-console.log(Object.values(tinderDog));
-console.log(Object.entries(tinderDog));//convert int array form
+// console.log(tinderDog.hasOwnProperty('user'))
+// console.log(Object.keys(tinderDog));
+// console.log(Object.values(tinderDog));
+// console.log(Object.entries(tinderDog));//convert int array form
+
+//destructuring
+
+//const {email} = tinderDog
+const {email:e} = tinderDog
+console.log(e);
