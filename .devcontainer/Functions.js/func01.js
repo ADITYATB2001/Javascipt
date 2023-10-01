@@ -61,3 +61,19 @@ const my = [100,200,300]
 //func2(my)
 
 func2(["aditya","VK","MSD"])
+
+
+function addOne(num)
+{
+    return num+1;
+}
+
+const res = addOne(1)
+console.log(res);
+
+// second type
+
+const addTwo = function(num){
+    return num+1
+}
+addTwo(3)
