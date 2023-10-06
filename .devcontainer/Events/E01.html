@@ -6,9 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li><img src="https://in.images.search.yahoo.com/images/view;_ylt=Awrx.95M.x9lj80YwO69HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzM3ZGU0OGE5MzIzMWE1NTUzYTA2ZTgwMWM0NDEwOTU0BGdwb3MDMgRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dimages%2Bowl%26ei%3DUTF-8%26type%3DE210IN1289G0%26fr%3Dmcafee%26fr2%3Dp%253As%252Cv%253Ai%252Cm%253Asb-top%26tab%3Dorganic%26ri%3D2&w=1920&h=1280&imgurl=blogs.ifas.ufl.edu%2Fsarasotaco%2Ffiles%2F2020%2F04%2Fowl-3972385_1920.jpg&rurl=https%3A%2F%2Fblogs.ifas.ufl.edu%2Fsarasotaco%2F2020%2F04%2F03%2Fbe-at-home-with-nature-series-great-horned-owls%2F&size=679.3KB&p=images+owl&oid=37de48a93231a5553a06e801c4410954&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&fr=mcafee&tt=Be-at-home+with+Nature+series%3A+Great+horned+owls+-+UF%2FIFAS+Extension+...&b=0&ni=200&no=2&ts=&tab=organic&sigr=.mlDPNLIXwnG&sigb=dsxn4DpCJvfF&sigi=8IAxSIQg0m8h&sigt=9uza8CDqcHhn&.crumb=HcHp4P51E/F&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&type=E210IN1289G0" alt="" width="100px" height="100px" id="owl" onclick="alert('owl')"></li>
-        <li></li>
+    <ul id="images">
+        <li><img src="https://blogs.ifas.ufl.edu/sarasotaco/files/2020/04/owl-3972385_1920.jpg" alt="owl" width="100px" height="100px" id="owl"></li>
+        <li><img src="https://i2.wp.com/cricketaddictor.com/wp-content/uploads/2023/08/Virat-Kohli-1200x675.jpg?strip=all" alt="virat" id="virat" width="100px" height="100px"></li>
+        <li><img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200" alt="car" id="car" width="100px" height="100px"></li>
     </ul>
 </body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl started')
+    // }
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     alert(e)
+    // },false)
+
+    // document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log("images clicked");
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    document.getElementById('images').addEventListener('click',(e)=>{
+        console.log(e.target.tagName);
+        if(e.target.tagName !== 'LI'){
+            let item = e.target.parentNode
+            console.log(item);
+            item.remove()
+        }
+    },false)
+</script>
 </html>
